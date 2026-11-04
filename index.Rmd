@@ -1,0 +1,8 @@
+---
+title: "Astrid Website"
+author: "Astrid Xu"
+date: "2026-11-04"
+output: html_document
+---
+
+# Introduction
