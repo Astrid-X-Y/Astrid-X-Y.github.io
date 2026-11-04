@@ -1,0 +1,30 @@
+
+---
+title: "Fun Stuff"
+---
+
+# My Pets
+
+I love all kinds of tortoises, aquatic turtles, and box turtles! This page is a little corner dedicated to my pet turtles!
+
+<div style="text-align: center;">
+  <img src="images/turtle1.jpeg" style="width:35%">
+</div>
+
+<div style="text-align: center;">
+  <img src="images/turtle2.jpeg" style="width:35%">
+</div>
+
+<div style="text-align: center;">
+  <img src="images/turtle3.jpeg" style="width:35%">
+</div>
+
+<div style="text-align: center;">
+  <img src="images/turtle4.jpeg" style="width:35%">
+</div>
+
+Would you like a little turtle kiss? Come here! *kiss
+
+<div style="text-align: center;">
+  <img src="images/turtle5.jpeg" style="width:35%">
+</div>
