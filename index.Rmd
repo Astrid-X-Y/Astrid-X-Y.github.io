@@ -1,8 +1,22 @@
+
 ---
-title: "Astrid Website"
-author: "Astrid Xu"
-date: "2026-11-04"
-output: html_document
+title: "Welcome to Astrid's Website!"
 ---
 
-# Introduction
+# About This Website
+
+Welcome to my personal website! This website is a space where I share my academic background, research and professional experiences, and personal interests.
+
+You can also explore an interactive data visualization dashboard created for P8105 Data Science Homework 4. Feel free to contact me for further discussions or potential collaborations!
+
+# About Me
+
+Hi! I'm Astrid Xu, a second-year Master of Public Health student in Environmental Health Sciences at Columbia University's Mailman School of Public Health.
+
+I received my bachelor's degree in Environmental Science and Terrestrial Resource Management from the University of Washington in 2025. Building on this background, I am continuing to explore different areas of environmental health and related sciences.
+
+I am particularly interested in the potential associations between environmental toxicant exposure and mental health, carcinogenicity, mitochondrial genetics and maternally inherited diseases, and mathematical models of seasonal influenza transmission.
+
+<div style="text-align: center;">
+  <img src="images/Astrid.jpg.JPG" style="width:50%">
+</div>
