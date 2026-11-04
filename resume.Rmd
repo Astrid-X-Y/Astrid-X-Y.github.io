@@ -1,0 +1,111 @@
+
+---
+title: "Academic & Professional Background"
+---
+
+# Education
+
+## Columbia University
+**Mailman School of Public Health | New York, NY**
+
+*Master of Public Health (MPH), Environmental Health Sciences | August 2025 - Present*
+
+Currently pursuing a Master of Public Health degree in Environmental Health Sciences, with additional training in Applied Biostatistics. Academic coursework emphasizes environmental toxicology, epidemiology, quantitative research methods, and statistical analysis of health data.
+
+Research interests include environmental exposure assessment, toxicological mechanisms of disease, environmental determinants of mental health, and the application of quantitative methods to public health research.
+
+## University of Washington
+**College of the Environment | Seattle, WA**
+
+*Bachelor of Science in Environmental Science and Terrestrial Resource Management | September 2021 - June 2025*
+
+Completed undergraduate training in environmental science, with an emphasis on ecosystem dynamics, terrestrial resource management, and environmental research methodologies.
+
+Academic and field-based research involved ecological monitoring, wildlife population studies, plant physiology, environmental data collection, and quantitative analysis. This interdisciplinary background provided a foundation for subsequent research in environmental health and population-level exposure assessment.
+
+# Public Health Internships
+
+## NYU Langone Health
+**Department of Population Health | Harvest Share Program**
+
+*Community Health Intern | July 2026 - September 2026*
+
+Participated in community-based public health research and nutrition education initiatives through the Harvest Share program, which serves diverse populations in Brooklyn. Responsibilities included conducting literature reviews, supporting the development of culturally adapted nutrition education materials, and facilitating multilingual communication between researchers, community partners, and program participants.
+
+Contributed to research activities involving participant recruitment, survey administration, and data collection. Assisted with the development and testing of research questionnaires, including the evaluation of barriers to participation and community engagement. Additional work involved supporting Chinese-language translations of educational materials and research instruments to improve accessibility for multilingual populations.
+
+Research activities also included reviewing literature on acculturation and health among Asian populations, with particular attention to cultural and social factors influencing health behaviors and access to community-based resources.
+
+## Harlem Wellness Center
+**Aesthetic Flat Closure (AFC) Awareness Campaign**
+
+*Public Health Intern | June 2026 - September 2026*
+
+Contributed to a collaborative public health initiative focused on improving awareness of aesthetic flat closure as a surgical option following mastectomy. The campaign emphasized informed surgical decision-making, patient education, and access to accurate information regarding post-mastectomy reconstruction and closure options.
+
+Responsibilities included conducting literature reviews, identifying relevant stakeholders, and supporting community outreach and educational material development. Additional activities involved coordinating partnerships among community organizations and academic collaborators, assisting with event planning, and contributing to strategies for engaging patients, healthcare professionals, and community advocates.
+
+The project incorporated health communication and community engagement approaches to support informed patient choices and broaden public awareness of available surgical options.
+
+# Professional Experience
+
+## New Oriental Global Education and Training Division
+*Teaching Assistant | June 2024 - August 2024*
+
+Provided academic and instructional support within an educational training environment. Responsibilities included monitoring student learning progress, evaluating academic performance, and communicating individualized feedback and recommendations.
+
+Additional duties involved developing follow-up learning plans, assisting with classroom activities, and supervising assignments and after-class learning sessions.
+
+## University of Washington
+**Urban Horticulture Plant Propagation**
+
+*Laboratory Assistant | March 2024 - June 2024*
+
+Supported undergraduate laboratory instruction in horticulture and plant propagation. Responsibilities included preparing laboratory equipment, biological samples, and instructional materials for practical demonstrations.
+
+Assisted with experimental procedures and plant propagation techniques, demonstrated laboratory methods, and provided technical guidance to students during instructional activities.
+
+## Kangyuan Medical Co., Ltd.
+*Clinic Front Desk Assistant | June 2021 - January 2023*
+
+Supported daily administrative and patient-facing operations in a clinical healthcare setting. Responsibilities included patient registration, appointment verification, medical visit coordination, and communication between patients and healthcare providers.
+
+Additional duties involved responding to patient inquiries and providing assistance with routine clinical operations and patient service needs.
+
+# Research & Academic Projects
+
+## Glyphosate Exposure and Depression Outcomes in U.S. Adults
+*Group Research Project | April 2026 - June 2026*
+
+Investigated the association between glyphosate exposure and depression outcomes using data from the 2017-2018 National Health and Nutrition Examination Survey (NHANES).
+
+Research activities included data cleaning, variable construction, and statistical analysis using R. Reproducible data processing workflows were developed to manage biomonitoring and health-related variables, while multivariable logistic regression models were applied to evaluate exposure-outcome associations and estimate adjusted odds ratios.
+
+The analysis incorporated epidemiologic considerations related to confounding, model specification, and the interpretation of observational associations between environmental chemical exposure and mental health outcomes.
+
+## Prenatal Psychosocial Exposures and Infant Health Outcomes
+*Independent Research and Literature Review | April 2026 - June 2026*
+
+Conducted an independent literature review investigating associations between prenatal psychosocial exposures and infant health outcomes.
+
+The project involved identifying and synthesizing evidence from peer-reviewed epidemiological studies, with attention to exposure assessment, study population characteristics, and maternal and infant health indicators.
+
+Methodological evaluation focused on study design, confounding, exposure misclassification, and other potential sources of bias. Findings were synthesized into a structured academic research paper examining the epidemiological evidence and methodological challenges associated with prenatal exposure research.
+
+## Raven Population Ecology
+*Independent Ecological Research | March 2024 - June 2024*
+
+Designed and conducted an independent research project examining raven behavior and population ecology. The project involved developing research questions and hypotheses, collecting observational data, and evaluating ecological patterns using quantitative approaches.
+
+Spatial data analysis was conducted using ArcGIS, while analysis of variance (ANOVA) was applied to investigate differences among observed groups or conditions.
+
+Research findings were presented through a formal public presentation and an illustrated research report developed to communicate ecological observations and analytical results.
+
+## Yellowstone National Park Field Research
+*Wildlife Ecology and Population Monitoring | January 2024 - February 2024*
+
+Participated in field-based ecological research examining wildlife populations and predator-prey interactions within Yellowstone National Park.
+
+Research activities included monitoring wolf, bison, and moose populations; recording observations of population structure and individual health; and documenting wildlife behavior and movement patterns.
+
+Field methods included camera-trap observations, bird banding, and the examination of biological evidence associated with predation events. Analysis of prey remains, including bone marrow and tooth or claw marks, was used to investigate aspects of wolf hunting and feeding behavior.
