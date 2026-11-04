@@ -1,0 +1,171 @@
+---
+title: "Data Visualization"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+
+data("ny_noaa")
+```
+
+```{r}
+# My thought was focusing on a single NOAA weather station to reduce the dataset size. I chose the Central Park weather station in NYC to look up for its NOAA station ID, and used it to filter the dataset, following by checking missing, cleaning the data, and creating interactive plots to explore weather patterns changes over time.
+ny_noaa |>
+  filter(id == "USW00094728") |>
+  count(id)
+
+central_park =
+  ny_noaa |>
+  filter(id == "USW00094728") |>
+  select(date, tmax, tmin, prcp, snow, snwd)
+
+# Checking missing + Variable type conversion
+central_park |>
+  summarize(
+    missing_tmax = sum(is.na(tmax)),
+    missing_tmin = sum(is.na(tmin)),
+    missing_prcp = sum(is.na(prcp)),
+    missing_snow = sum(is.na(snow)),
+    missing_snwd = sum(is.na(snwd))
+  )
+
+class(central_park$tmax)
+class(central_park$tmin)
+class(central_park$prcp)
+
+central_park_clean =
+  central_park |>
+  select(date, tmax, tmin, prcp, snow) |>
+  mutate(
+    tmax = as.numeric(tmax),
+    tmin = as.numeric(tmin)) |>
+  mutate(
+    tmax = tmax / 10,
+    tmin = tmin / 10,
+    prcp = prcp / 10) |> mutate(
+    tavg = (tmax + tmin) / 2)
+
+central_park_clean |>
+  summarize(
+    missing_tmax = sum(is.na(tmax)),
+    missing_tmin = sum(is.na(tmin)),
+    missing_tavg = sum(is.na(tavg))
+  )
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Annual Average Temperature
+This plot aims to explore annual temperature changes in Central Park from 1981 to 2010 to identify potential long-term climate patterns. A bar plot is used to show the average temperature for each year and allow comparisons of temperature variations across the 30-year period.
+```{r}
+central_park_annual =
+  central_park_clean |>
+  mutate(
+    year = lubridate::floor_date(date, unit = "year")) |>
+  group_by(year) |>
+  summarize(
+    mean_tavg = mean(tavg)) |>
+  ungroup()
+
+central_park_annual |>
+  plot_ly(
+    x = ~year,
+    y = ~mean_tavg,
+    type = "bar"
+  )
+
+central_park_annual |>
+  plot_ly(
+    x = ~year,
+    y = ~mean_tavg,
+    type = "bar") |>
+  layout(
+    xaxis = list(title = "Year"),
+    yaxis = list(title = "Mean Temperature (°C)")
+  )
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Monthly Temperature Distribution
+This plot aims to explore seasonal temperature variations in Central Park by comparing daily average temperatures across the 12 months. A boxplot is used to visualize the distribution, median, and variability of temperatures, making it easier to identify seasonal differences and potential outliers.
+```{r}
+central_park_monthly =
+  central_park_clean |>
+  mutate(
+    month = str_sub(date, 6, 7)) |>
+  select(month, tavg)
+
+central_park_monthly |>
+  plot_ly(
+    y = ~tavg,
+    color = ~month,
+    type = "box"
+  )
+```
+
+### Snowfall Intensity
+This plot aims to explore changes in snowfall intensity in Central Park between two decades (1991–2000 and 2001–2010) to examine potential changes in winter climate. Two lines are used to show individual annual values while comparing the overall patterns and trends between the two periods.
+```{r}
+central_park_snow =
+  central_park_clean |>
+  mutate(
+    year = as.numeric(str_sub(date, 1, 4))) |>
+  filter(
+    year >= 1991,
+    year <= 2010,
+    snow > 0) |>
+  mutate(
+    period = case_when(
+      year <= 2000 ~ "1991-2000",
+      year > 2000 ~ "2001-2010")) |>
+  mutate(
+    year_in_decade = case_when(
+      year <= 2000 ~ year - 1990,
+      year > 2000 ~ year - 2000
+    )
+  )
+
+snow_annual =
+  central_park_snow |>
+  group_by(period, year_in_decade) |>
+  summarize(
+    mean_snow = mean(snow),
+    n_snowy_days = n()) |>
+  ungroup()
+
+snow_annual
+
+snow_annual |>
+  plot_ly(
+    x = ~year_in_decade,
+    y = ~mean_snow,
+    color = ~period,
+    type = "scatter",
+    mode = "lines"
+  )
+
+snow_annual |>
+  plot_ly(
+    x = ~year_in_decade,
+    y = ~mean_snow,
+    color = ~period,
+    type = "scatter",
+    mode = "lines+markers") |>
+  layout(
+    xaxis = list(title = "Year Within Decade"),
+    yaxis = list(title = "Mean Snowfall per Snowy Day (mm)")
+  )
+```
+
