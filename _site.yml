@@ -9,6 +9,8 @@ navbar:
       href: resume.html
     - text: "Fun Stuff"
       href: fun.html
+    - text: "Dashboard"
+      href: dashboard.html
   right:
     - icon: fa-envelope fa-lg
       href: "mailto:xx2519@cumc.columbia.edu"

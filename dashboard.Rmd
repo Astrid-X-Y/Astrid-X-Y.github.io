@@ -3,7 +3,7 @@ title: "Data Visualization"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
-    vertical_layout: fill
+    vertical_layout: scroll
 editor_options: 
   chunk_output_type: console
 ---
@@ -16,7 +16,7 @@ library(plotly)
 data("ny_noaa")
 ```
 
-```{r}
+```{r, include=FALSE}
 # My thought was focusing on a single NOAA weather station to reduce the dataset size. I chose the Central Park weather station in NYC to look up for its NOAA station ID, and used it to filter the dataset, following by checking missing, cleaning the data, and creating interactive plots to explore weather patterns changes over time.
 ny_noaa |>
   filter(id == "USW00094728") |>
@@ -67,7 +67,7 @@ Column {data-width=650}
 
 ### Annual Average Temperature
 This plot aims to explore annual temperature changes in Central Park from 1981 to 2010 to identify potential long-term climate patterns. A bar plot is used to show the average temperature for each year and allow comparisons of temperature variations across the 30-year period.
-```{r}
+```{r, include=FALSE}
 central_park_annual =
   central_park_clean |>
   mutate(
@@ -76,7 +76,9 @@ central_park_annual =
   summarize(
     mean_tavg = mean(tavg)) |>
   ungroup()
+```
 
+```{r, echo=FALSE}
 central_park_annual |>
   plot_ly(
     x = ~year,
@@ -100,13 +102,15 @@ Column {data-width=350}
 
 ### Monthly Temperature Distribution
 This plot aims to explore seasonal temperature variations in Central Park by comparing daily average temperatures across the 12 months. A boxplot is used to visualize the distribution, median, and variability of temperatures, making it easier to identify seasonal differences and potential outliers.
-```{r}
+```{r, include=FALSE}
 central_park_monthly =
   central_park_clean |>
   mutate(
     month = str_sub(date, 6, 7)) |>
   select(month, tavg)
+```
 
+```{r, echo=FALSE}
 central_park_monthly |>
   plot_ly(
     y = ~tavg,
@@ -117,7 +121,7 @@ central_park_monthly |>
 
 ### Snowfall Intensity
 This plot aims to explore changes in snowfall intensity in Central Park between two decades (1991–2000 and 2001–2010) to examine potential changes in winter climate. Two lines are used to show individual annual values while comparing the overall patterns and trends between the two periods.
-```{r}
+```{r, include=FALSE}
 central_park_snow =
   central_park_clean |>
   mutate(
@@ -146,7 +150,9 @@ snow_annual =
   ungroup()
 
 snow_annual
+```
 
+```{r, echo=FALSE}
 snow_annual |>
   plot_ly(
     x = ~year_in_decade,
